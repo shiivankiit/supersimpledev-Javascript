@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random-number</title>
+  </head>
+  <body>
+    <script>
+      let randomNumber = Math.random();
+      let result = "";
+      let guess = "heads";
+      if (randomNumber < 0.5 && guess === result) {
+        result = "heads";
+        console.log("You win");
+      } else {
+        result = "tails";
+        console.log("You loose");
+      }
+    </script>
+  </body>
+</html>
+
+<!-- Other questions are basic question if you know some mid level of javascript 
+ skip it. -->

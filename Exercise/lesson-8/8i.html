@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Head-tails-Game</title>
+  </head>
+  <body>
+    <button onclick="playGame('Heads')">Heads</button>
+    <button onclick="playGame('tails')">Tails</button>
+    <script>
+      let score = JSON.parse(localStorage.getItem("score")) || {
+        wins: 0,
+        losses: 0,
+      };
+      function playGame(playerMove) {
+        let computerchoice = computerMove();
+
+        let result = "";
+        if (playerMove == "Heads") {
+          if (computerchoice == "Heads") {
+            result = "You win";
+          } else {
+            result = "You loose";
+          }
+        } else if (playerMove == "tails") {
+          if (computerchoice == "tails") {
+            result = "You win";
+          } else {
+            result = "You lose";
+          }
+        }
+        if (result === "You win") {
+          score.wins += 1;
+        } else {
+          score.losses += 1;
+        }
+
+        localStorage.setItem("score", JSON.stringify(score));
+
+        alert(
+          `You picked ${playerMove}. Computer picked ${computerchoice}. ${result}
+Wins:${score.wins}, Losses:${score.losses}`,
+        );
+      }
+
+      function computerMove() {
+        let randomNumber = Math.random();
+        let computerchoice = "";
+        if (randomNumber > 0 && randomNumber < 1 / 3) {
+          computerchoice = "Heads";
+        } else {
+          computerchoice = "tails";
+        }
+        return computerchoice;
+      }
+    </script>
+  </body>
+</html>

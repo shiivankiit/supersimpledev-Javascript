@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM-Projects</title>
+  </head>
+  <body>
+    <p>Youtube Subscribe Button</p>
+    <button onclick="subscribe()">Subscribe</button>
+    <script>
+      function subscribe() {
+        const buttonElem = document.querySelector("button");
+        if (buttonElem.innerText === "Subscribe") {
+          buttonElem.innerHTML = "Subscribed";
+        } else {
+          buttonElem.innerHTML = "Subscribe";
+        }
+      }
+    </script>
+  </body>
+</html>
+<!--
+  Process for JavaScript.
+  1:-Figure out what steps we need(algorithm). 
+  2:-Convert these steps into code.
+-->

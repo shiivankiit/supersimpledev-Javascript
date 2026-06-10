@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+        const product={
+            name:'socks',
+            price:1090
+        };
+        console.log(product);
+        console.log(product.name);
+        console.log(product.price);
+
+        product.name='cotton socks';
+        console.log(product);
+
+        product.newProperty=true;
+        console.log(product);
+
+        delete product.newProperty;
+        console.log(product);
+        
+        const product2={
+            name:'shirt',
+            ['deliver-time']:'1 day',
+            rating:{
+                stars:4.5,
+                count:87
+            },
+            fun:function function1(){
+                console.log('function inside object');
+            }
+        };
+        console.log(product2);
+        console.log(product2.name);
+        // Bracket Notation:-lets us use properties that don't work
+        //with dot notation.
+        console.log(product2['name']);
+        console.log(product2['deliver-time']);
+        console.log(product2.fun());
+        
+        //We use JSON-
+        //When we send data btwn computers.
+        //when we store data.
+        console.log(JSON.stringify(product2));
+        const jsonstring=JSON.stringify(product2);
+        JSON.parse(jsonstring);
+
+        //Next built-in object:
+        //localStorgae-save values more premanently.
+        //------------------
+        //variables are temporary
+        //if we refresh/close the page,all the variables are deleted.
+
+
+        console.log('hello'.length);
+        console.log('hello'.toUpperCase);
+
+        const object1={
+            message:'hello'
+        };
+        const object2=object1;
+        object1.message='Good job !'
+        console.log(object1)
+        console.log(object2);
+
+        const object3={
+            message:'Good job!'
+        };
+        //Here we are comparing the refrence no the values.
+        console.log(object3 === object1);
+        console.log(object2 === object1);
+
+        //Destructuring:-easier way to take properties out of an object.
+        const object4={
+            message:'Good job',
+            price:799
+        };
+        // const message=object4.message;
+        const {message,price}=object4;
+        console.log(message);
+        console.log(message);
+        console.log(price);
+
+        //shorthand properties.
+        const object5={
+            message: message,
+            // method: function function1(){
+            //     console.log('method');
+            // }
+            method(){
+                console.log('method');
+                
+            }
+        }
+        console.log(object5);
+        object5.method();
+        
+    </script>
+</body>
+</html>
+
+<!-- 
+In this lesson:
+1.objects=group related values together
+2.Added a score to Rock Paper Scissors
+3.Built-in objetcs (JSON,localStorage)
+4,More details(null,auto-boxing,references)
+5,Shortcuts(destructuring,shorthand property,shorthand method)
+
+-->

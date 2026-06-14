@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body>
+    <button>9a</button>
+    <button class="second-button">9b</button>
+    <script>
+        const elem=document.querySelector('button');
+        console.log(elem);
+        console.log(elem.innerHTML);
+        const elem2=document.querySelector('.second-button');
+        elem2.innerHTML='9b done!';
+        
+    </script>
+</body>
+</html>

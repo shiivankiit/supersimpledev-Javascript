@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document-Object-Model</title>
+  </head>
+  <body>
+    <input type="text" class="name-holder"
+    onkeydown="if(event.key === 'Enter'){
+        displayname();
+    }"
+     placeholder="Enter your name" />
+    <button onclick="displayname()">Submit</button>
+    <p class="text"></p>
+    <script>
+      function displayname() {
+        let elem1 = document.querySelector(".name-holder");
+        const name = elem1.value;
+
+        document.querySelector(".text").innerHTML = `Your name is ${name}`;
+      }
+    </script>
+  </body>
+</html>

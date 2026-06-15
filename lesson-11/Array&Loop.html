@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and Loops</title>
+</head>
+<body>
+    <script>
+        const myArray=[10,20,30]
+        console.log(myArray);
+        console.log(myArray[0]);
+        console.log(myArray[0]=10);
+
+        const myArray2=[1,'hello',true,{name:'socks'},[1,2]];
+        console.log(typeof [1,2]);
+        console.log(Array.isArray([1,2]));
+        
+        console.log(myArray.length);
+
+        myArray.push(100);
+        myArray.splice(0,1);
+        console.log(myArray);
+
+        //Loops
+        //--while loop.
+        let i=1;
+        while(i<=5){
+            console.log(i);
+            i=i+1;
+        }
+        //for loop.
+        for(let i=0;i<=5;i++){
+            console.log(i);
+        }
+
+        //do-while loop.
+        
+    </script>
+</body>
+</html>
+<!-- Arrays:-
+  - another type of value.
+  - represent a list of values.
+  - Array also have properties and method.
+
+  - .push()-Adds a value to the end of the array.
+  - .splice()-Index we want to remove and NUmber of values to remove.
+  -->

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Head and Tails</title>
+  </head>
+  <body>
+    <button onclick="playgame(this)">Head</button>
+    <button onclick="playgame(this)">Tails</button>
+    <p class="result"></p>
+    <p class="score-value"></p>
+
+    <script>
+      let score ={
+        wins: 0,
+        losses: 0,
+      };
+
+      function playerMove(button) {
+        let playerclick = button.innerHTML;
+        return playerclick;
+      }
+
+      function guess() {
+        let no = Math.random();
+        let result = "";
+
+        if (no < 0.5) {
+          result = "heads";
+        } else {
+          result = "Tails";
+        }
+        return result;
+      }
+
+      function playgame(button) {
+        let playerguess = playerMove(button);
+        let randomguess = guess();
+        let finalresult = "";
+        if (playerguess === randomguess) {
+          finalresult = "You win";
+        } else {
+          finalresult = "You lose";
+        }
+
+        if (finalresult === "You win") {
+          score.wins++;
+        } else {
+          score.losses++;
+        }
+        document.querySelector(".result").innerHTML = finalresult;
+        document.querySelector(".score-value").innerHTML =
+          `Wins:${score.wins},Losses:${score.losses}`;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game-Button</title>
+    <style>
+      .js-button {
+        border: none;
+        background-color: black;
+        color: white;
+        padding: 15px 20px 15px 20px;
+        font-size: 16px;
+      }
+
+      .music-button {
+        border: none;
+        background-color: black;
+        color: white;
+        padding: 15px 20px 15px 20px;
+        font-size: 16px;
+      }
+      .is-music {
+        background-color: White;
+        border: 1px solid black;
+        color: black;
+      }
+      .Tech-button {
+        border: none;
+        background-color: black;
+        color: white;
+        padding: 15px 20px 15px 20px;
+        font-size: 16px;
+      }
+      .is-toggled {
+        background-color: White;
+        border: 1px solid black;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="js-button" onclick="togglebutton()">Gaming</button>
+    <button class="music-button" onclick="togglebtn()">Music</button>
+    <button class="Tech-button" onclick="techtogllebtn()">Tech</button>
+    <script>
+      function togglebutton() {
+        const button = document.querySelector(".js-button");
+        if (button.classList.contains("is-toggled")) {
+          button.classList.remove("is-toggled");
+        } else {
+          button.classList.add("is-toggled");
+        }
+      }
+
+      function togglebtn() {
+        const button1 = document.querySelector(".music-button");
+
+        if (button1.classList.contains("is-music")) {
+          button1.classList.remove("is-music");
+        } else {
+          button1.classList.add("is-music");
+        }
+      }
+
+      function techtogllebtn() {
+        const button2 = document.querySelector(".Tech-button");
+        if (button2.classList.contains("is-toggled")) {
+          button2.classList.remove("is-toggled");
+        } else {
+          button2.classList.add("is-toggled");
+        }
+      }
+    </script>
+  </body>
+</html>

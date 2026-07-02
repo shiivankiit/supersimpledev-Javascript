@@ -1,0 +1,37 @@
+<!-- Class-List:-
+    The class-list property in javascript is a read-only propert of an element that return 
+    a live collection of css classes.
+    The classList is a DOMTokenList object that represents the contents of the element’s class attribute.
+
+    Even though classlist is read-only,but you can manipulate the classes it contains using various method.
+-->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class-List</title>
+  </head>
+  <body>
+    <button class="js-button">Test</button>
+    <script>
+      const button = document.querySelector(".js-button");
+      console.log(button.classList.contains("js-button"));
+    </script>
+  </body>
+</html>
+
+<!-- 
+Explanation:-
+1-document.querySelector('.js-button') selects the button.
+2-button.classList gives you access to all the classes on the button.
+3-classList.contains('js-button') checks whether the class js-button exists on that element.
+4-Since the button has that class console.log() prints true.
+
+If you checked for a class that doesn't exist 
+console.log(button.classList.contains('active'));
+
+The output would be:-
+false.
+-->

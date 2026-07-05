@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock-Paper-Game</title>
+  </head>
+  <style>
+    body{
+        background-color: rgb(24, 23, 23);
+    }
+    .heading{
+        font-size: 35px;
+        color: white;
+        font-weight: bold;
+    }
+    .result-value{
+      font-size: 30px;
+      color: white;
+      font-weight: bold;
+    }
+    .score-display{
+      font-size: 30px;
+      color: white;
+      font-weight: bold;
+    }
+    .score-btn{
+      border: none;
+      padding: 10px 5px;
+    }
+
+  </style>
+  <body>
+    <p class="heading">Rock-Paper-Scissor</p>
+    <button onclick="playGame(this)"><img src="images/rock-emoji.png" alt="rock"></button>
+    <button onclick="playGame(this)"><img src="images/paper-emoji.png" alt="paper"></button>
+    <button onclick="playGame(this)"><img src="images/scissors-emoji.png" alt="scissors"></button>
+    <p class="moves"></p>
+    <p class="result-value"></p>
+    <p class="score-display"></p>
+
+    <button class="score-btn" onclick="resetScore()">Reset Score</button>
+    <script src="game.js"></script>
+  </body>
+</html>
